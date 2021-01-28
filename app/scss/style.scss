@@ -12,6 +12,15 @@
   }
 }
 
+.logo {
+  display: inline-block;
+
+  &__img {
+    display: inline-block;
+  }
+
+}
+
 .menu {
 
   &__list {
@@ -114,4 +123,117 @@
   }
 }
 
+.footer {
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 77px;
+    border-bottom: 1px solid #dae4e9;
+  }
+
+  &__item {
+    max-width: 200px;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 1.7;
+    color: $footer-link;
+  }
+
+  &__item:last-child {
+    max-width: 273px;
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__address {
+    font-style: normal;
+  }
+
+  &__address-text + .footer__address-text {
+    margin-top: 24px;
+  }
+
+  &__address-name,
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: 28px;
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: $footer-title;
+  }
+
+  &__text .footer__text-item + .footer__text-item {
+    margin-top: 20px;
+  }
+  
+  &__link {
+    color: $footer-link;
+  }
+
+  &__subtitle {
+    max-width: 250px;
+    margin-bottom: 38px;
+  }
+
+  &__email {
+    padding: 12px 14px;
+    @extend %dmsans-400;
+    font-size: 12px;
+    color: $input;
+    background-color: #fef7f0;
+    border: none;
+  }
+
+  &__email::placeholder {
+    color: $input;
+    @extend %dmsans-400;
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  &__submit {
+    margin-left: -4px;
+    padding: 15px 14px;
+    @extend %dmsans-400;
+    font-size: 14px;
+    line-height: 1;
+    color: #ffffff;
+    background-color: #a3bbc8;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 35px 0;
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 1.7;
+    color: $footer-link;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__nav-item {
+    padding: 0 15px;
+  }
+
+  &__nav-item + .footer__nav-item {
+    border-left: 1px solid $footer-link;
+  }
+
+  &__nav-item:last-child {
+    padding-right: 0;
+  }
+
+}
 @import "media";
