@@ -1,9 +1,17 @@
 $default: #243f4d;
 $accent: #436372;
+$bg: #fcd7b6;
+$bg-btn: #a3bbc8;
 $footer-title: #1f2044;
 $footer-link: #7b7b7b;
 $link-hover: #666666;
 $input: #234969;
+
+%image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 %dmsans-400 {
   font-family: 'DMSans-Regular', sans-serif;

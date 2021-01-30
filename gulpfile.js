@@ -20,15 +20,6 @@ function browsersync() {
 
 function styles() {
   return src('app/scss/style.scss')
-    .pipe(scss({outputStyle: 'expanded'}))
-    .pipe(concat('style.css'))
-    .pipe(autoprefixer({
-      overrideBrowserslist: ['last 10 version'],
-      grid: true
-    }))
-    .pipe(dest('app/css'))
-
-
     .pipe(scss({outputStyle: 'compressed'}))
     .pipe(concat('style.min.css'))
     .pipe(autoprefixer({
@@ -42,6 +33,7 @@ function styles() {
 function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
+    'node_modules/slick-carousel/slick/slick.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))
