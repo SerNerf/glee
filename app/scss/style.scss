@@ -458,9 +458,10 @@ padding-top: 80px;
     border: none;
     background-color: transparent;
     cursor: pointer;
-    &--active {
-      color: $filter-active;
-    }
+  }
+
+  .mixitup-control-active {
+    color: $filter-active;
   }
 
   &__nav-btn + .filter__nav-btn {
