@@ -7,5 +7,5 @@ $(function(){
     slidesToScroll: 1,
   })
   
-  var mixer = mixitup('.filter__wrapper');
+  var mixer = mixitup('.products-week__wrapper');
 });
