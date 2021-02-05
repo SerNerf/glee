@@ -110,7 +110,20 @@
       padding: 20px 25px 13px 25px;
       border-radius: 50%;
       
+      &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 12px;
+        right: -4px;
+        
+        width: 1px;
+        height: 32px;
+
+        background-color: #ffffff;
+        opacity: 0.4;
+      }
     }
+
 
   &__num {
     position: absolute;
