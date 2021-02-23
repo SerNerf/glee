@@ -3,9 +3,12 @@ $accent: #436372;
 $title: #191919;
 $bg: #fcd7b6;
 $bg-btn: #a3bbc8;
-$link: #7b7b7b;
-
-
+$filter-active: #1a1a1a;
+$filter-btn: #8b8b8b;
+$footer-title: #1f2044;
+$footer-link: #7b7b7b;
+$link-hover: #666666;
+$input: #234969;
 
 %image {
   background-repeat: no-repeat;
@@ -37,4 +40,9 @@ $link: #7b7b7b;
 %rubik-500 {
   font-family: 'Rubik-Medium' , sans-serif;
   font-weight: 500;
+}
+
+%poppins-700 {
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 700;
 }
