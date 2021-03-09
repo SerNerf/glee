@@ -1,0 +1,29 @@
+@media(max-width: 1010px) {
+    .menu {
+        &__link {
+            font-size: 12px;
+        }
+    }
+
+    .user-nav {
+
+        &__link {
+            width: 30px;
+            height: 30px;
+
+            svg {
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        &__group-link {
+            padding: 13px 25px 10px;
+        }
+
+        &__num {
+            top: 6px;
+        }
+
+    }
+}
