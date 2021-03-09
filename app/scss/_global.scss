@@ -33,3 +33,28 @@ body {
   line-height: 1.2;
   color: $title;
 }
+
+.link-btn {
+  position: relative;
+  display: inline-block;
+  max-width: 200px;
+  width: 100%;
+  padding: 27px 47px 21px 27px;
+  @extend %rubik-500;
+  font-size: 15px;
+  line-height: 1;
+  color: #ffffff;
+  background-color: $bg-btn;
+  cursor: pointer;
+  &::after {
+    content: "";
+    position: absolute;
+    top: auto;
+    bottom: auto;
+    right: 18px;
+    width: 22px;
+    height: 9px;
+    background-image: url("../images/icon/right-arrow.svg");
+    @extend %image;
+  }
+}

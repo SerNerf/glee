@@ -335,32 +335,6 @@ padding-top: 80px;
     line-height: 1.6;
     color: $accent;
   }
-
-  &__link {
-    position: relative;
-    display: inline-block;
-    max-width: 200px;
-    width: 100%;
-    padding: 27px 47px 21px 27px;
-    @extend %rubik-500;
-    font-size: 15px;
-    line-height: 1;
-    color: #ffffff;
-    background-color: $bg-btn;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: auto;
-      bottom: auto;
-      right: 18px;
-      width: 22px;
-      height: 9px;
-      background-image: url("../images/icon/right-arrow.svg");
-      @extend %image;
-    }
-
-  }
   
   &__img {
     z-index: 10;
@@ -1014,16 +988,241 @@ padding-top: 80px;
   }
 
   &__bottom {
+    position: relative;
+
     display: flex;
     align-self: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: auto;
+    padding-top: 40px;
+
+    width: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      max-width: 500px;
+      width: 100%;
+      height: 3px;
+
+      background-color: #e6eaf0;
+    }
   }
+ 
 
   &__items {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 70px;
+
+    color: #243f4d;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 0;
+
+      width: 50px;
+      height: 50px;
+
+      @extend %image;
+    }
+
+    &--projects {
+      &::before{
+        left: 5px;
+        background-image: url("../images/icon/list.svg");
+      }
+    }
+
+    &--revenue {
+      &::before {
+        width: 55px;
+        background-image: url("../images/icon/golos.svg");
+      }
+    }
+
+    &--awards {
+      &::before {
+        background-image: url("../images/icon/award.svg");
+      }
+    }
+  }
+
+  &__num {
+    margin-bottom: 2px;
+
+    @extend %dmsans-700;
+    font-size: 36px;
+    line-height: 1.056;
+  }
+
+  &__text { 
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 1.063;
+  }
+}
+
+.statistics {
+  text-align: center;
+
+  padding: 80px 0;
+
+  background-color: #fcd7b6;
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    @extend %dmsans-700;
+    color: #243f4d;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__icon {
+    margin-bottom: 10px;
+  }
+
+  &__num {
+    margin-bottom: 15px;
+
+    font-size: 36px;
+    line-height: 1;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.7;
+  }  
+}
+
+.team {
+  padding: 120px 0 100px;
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__aside {
+    max-width: 280px;
+    margin-right: 120px;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__discription {
+    margin-bottom: 40px;
+
+    @extend %rubik-400;
+    font-size: 16px;
+    color: rgb(36, 63, 77);
+    line-height: 1.8;
+  }
+  
+  &__btn {
+    max-width: 150px;
+    padding: 18px 40px 18px 15px;
+
+    border-radius: 5px;
+
+    &::after {
+      top: 20px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-gap: 100px 30px;
+    width: 100%;
+  }
+
+  &__item {
+    position: relative;
+
+    max-width: 370px;
+    width: 100%;
+    min-height: 320px;
+
+    @extend %image;
+  }
+
+  &__bottom {
+    position: absolute;
+    left: 0;
+    bottom: -55px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 325px;
+    width: 100%;
+    min-height: 110px;
+    padding: 0 20px 0 25px;
+
+    background-color: #ffffff;
+    box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+  }
+  
+  &__name {
+    margin-bottom: 5px;
+
+    @extend %dmsans-700;
+    font-size: 22px;
+    line-height: 1.18;
+  }
+
+  &__profession {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 1.875;
+    color: #565872;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+    background-color: #f6f6f6;
+    border-radius: 50%;
+
+    @extend %image;
+    background-size: auto;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &--instagram {
+      background-image: url("../images/icon/instagram.svg");
+    }
+
+    &--google {
+      background-image: url("../images/icon/google.svg");
+    }
   }
 
 }
+
+
+
+
 
 @import "media";
