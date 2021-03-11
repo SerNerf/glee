@@ -35,6 +35,20 @@ $(function(){
     autoplaySpeed: 1500,
     slidesToShow: 5,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 850,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 575,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+    ]
   })
   
   var mixer = mixitup('.products-week__wrapper');
