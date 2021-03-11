@@ -920,6 +920,14 @@ padding-top: 80px;
   min-height: 436px;
   background-color: #fef7f0;
 
+  &__item {
+    max-width: 150px;
+    img {
+      display: inline-block;
+    }
+  }
+
+
   &__wrapper {
     display: flex;
     flex-direction: column;
