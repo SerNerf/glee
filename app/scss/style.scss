@@ -308,8 +308,6 @@ padding-top: 80px;
 }
 
 .main-slider {
-  min-height: calc(820px - 157px);
-  margin-top: 157px;
   
   &__wrapper {
     background-color: $bg;
@@ -317,19 +315,21 @@ padding-top: 80px;
 
   &__inner {
     position: relative;
-    min-height: 820px;
   }
 
   &__item {
     position: relative;
 
     display: flex !important;
-    padding: 100px 170px 200px;
+    max-width: 1430px;
+    margin: 0 auto;
+    padding: 100px 0 200px;
+
 
     &::after {
       content: "";
       position: absolute;
-      right: 185px;
+      left: 49%;
       width: 634px;
       height: 634px;
       background: linear-gradient( 90deg, rgba(255,255,255, 0) 0%, rgb(255,255,255) 100%);
@@ -619,6 +619,9 @@ padding-top: 80px;
     padding-bottom: 85px;
 
     background-color: #feefe2;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
 
   &__img {
@@ -628,13 +631,39 @@ padding-top: 80px;
   }
 
   & &__list {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
-    max-width: 400px;
+    max-width: calc(260px + (335 - 260) * ((100vw - 1095px) / (1770 - 1095)));
     margin-left: auto;
-    margin-right: 84px;
+    margin-right: calc(0px + (84 - 0) * ((100vw - 1095px) / (1770 - 1095)));
+    padding-right: 5px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -260px;
+
+      width: 230px;
+      height: 400px;
+
+      @extend %image;
+    }
+
+    &--1 {
+      &::before {
+        background-image: url("../images/marketing/lamp-1.png");
+      }
+    }
+
+    &--2 {
+      &::before {
+        background-image: url("../images/marketing/lamp-2.png");
+      }
+    }
   }
 
   &__name {
@@ -683,7 +712,7 @@ padding-top: 80px;
 
   &__wrapper {
     display: grid;
-    grid-template: repeat(2, 246px) / repeat(3, 370px);
+    grid-template: repeat(2, 246px) / repeat(3, 1fr);
     grid-column-gap: 30px;
     grid-row-gap: 34px;
     margin-bottom: 120px;
