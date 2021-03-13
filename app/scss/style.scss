@@ -811,7 +811,7 @@ padding-top: 80px;
 
 .news {
   min-height: 450px;
-  padding-top: 120px;
+  padding-top: 60px;
 
   
   &__top {
@@ -1300,7 +1300,40 @@ padding-top: 80px;
 
 }
 
+.terns-conditions {
+  padding-top: 120px;
 
+  &__block {
+    margin-bottom: 75px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+
+    @extend %rubik-500;
+    font-size: 24px;
+  }
+
+  &__item {
+    margin-left: 35px;
+    padding-left: 5px;
+
+    @extend %rubik-400;
+    font-size: 16px;
+
+    list-style-type: decimal-leading-zero;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__text {
+    @extend %rubik-400;
+    font-size: 16px;
+  }
+
+}
 
 
 
