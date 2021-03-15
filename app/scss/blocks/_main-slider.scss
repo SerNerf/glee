@@ -149,3 +149,189 @@
       color: #585858;
     }
 }
+
+@media(max-width: 1400px) {
+  .main-slider {
+
+    &__item {
+      &::after {
+        top: 70px;
+        left: 44%;
+
+        width: 600px;
+        height: 600px;
+      }
+    }
+
+    &__text {
+      max-width: 360px;
+      margin: 100px 0 0 80px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+
+      font-size: 60px;
+    }
+
+    &__discription {
+      margin-bottom: 30px;
+
+      font-size: 16px;
+    }
+
+    &__img {
+      max-width: 550px;
+      margin: 0 auto;
+      
+      object-fit: cover;
+    }
+  }
+
+  .info {
+    padding: 40px 40px;
+  }
+}
+
+@media(max-width: 1095px) {
+  .main-slider {
+    &__item {
+      padding: 80px 0 140px;
+      &::after {
+        top: 35px;
+        left: 48%;
+
+        width: 420px;
+        height: 420px;
+      }
+    }
+
+    &__text {
+      margin: 65px 0 0 30px;
+    } 
+
+    &__img {
+      max-width: 420px;
+      margin: auto auto;
+    }
+  }
+
+  .info {
+    padding: 40px 10px;
+
+    &__item {
+      padding-left: 100px;
+        
+      &:first-child {
+        padding-left: 90px;
+      }
+
+      &::before {
+        left: 28px;
+      }
+    }
+
+    &__title {
+      font-size: 15px;
+    }
+
+    &__text {
+      max-width: 160px;
+
+      font-size: 14px;
+    }
+  }
+}
+
+@media(max-width: 850px) {
+
+  .main-slider {
+
+    &__item {
+      &::after {
+        display: none;
+      }
+    }
+
+    &__text {
+      text-align: center;
+
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    &__title {
+      font-size: 48px;
+    }
+
+    &__discription {
+      margin: 0 auto 30px;
+    }
+
+    &__img {
+      display: none !important;
+    }
+  }
+
+  .info {
+    flex-direction: column;
+
+    padding: 15px 10px;
+
+    &__item {
+      max-width: 270px;
+      margin: 0 auto;
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+@media(max-width: 575px) {
+  .main-slider {
+    &__item {
+        padding: 40px 0 80px;
+    }
+
+    &__title {
+      font-size: 30px;
+    }
+
+    &__discription {
+      margin-bottom: 20px;
+      padding: 0 15px;
+
+      font-size: 14px;
+    }
+
+    .link-btn {
+      max-width: 150px;
+      padding: 14px 38px 14px 0px;
+
+      font-size: 14px;
+
+      &::after {
+        top: 16px;
+      }
+    }
+
+    .slick-dots {
+      bottom: 25px;
+    }
+  }
+
+  .info {
+    &__item {
+      padding-left: 80px;
+
+      &:first-child {
+        padding-left: 70px;
+      }
+
+      &::before {
+        left: 3px;
+      }
+    }
+  }
+}

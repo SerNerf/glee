@@ -1,55 +1,98 @@
 .new-design {
-    text-align: center;
+  text-align: center;
+
+  &__title {
+    margin-bottom: 29px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template: repeat(2, 246px) / repeat(3, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 34px;
+    margin-bottom: 120px;
+  }
   
-    &__title {
-      margin-bottom: 29px;
+  &__item {
+    position: relative;
+    text-align: start;
+
+    padding: 43px 0 0 38px;
+
+    background-color: #f8f8f8;
+  }
+
+  &__list {
+    z-index: 10;
+    position: relative;
+    max-width: 200px;
+
+    @extend %dmsans-700;
+    line-height: 1.2;
+  }
+  
+  &__name {
+    margin-bottom: 21px;
+
+    font-size: 20px;
+    color: $title;
+  }
+
+  &__quality {
+    font-size: 16px;
+
+    &--classic {
+      color: $bg-btn;
     }
+  }
   
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@media(max-width: 1095px) {
+  .new-design {
     &__wrapper {
-      display: grid;
-      grid-template: repeat(2, 246px) / repeat(3, 1fr);
-      grid-column-gap: 30px;
-      grid-row-gap: 34px;
-      margin-bottom: 120px;
+      grid-template: repeat(3, 246px)/repeat(2, 1fr);
     }
-    
-    &__item {
-      position: relative;
-      text-align: start;
-  
-      padding: 43px 0 0 38px;
-  
-      background-color: #f8f8f8;
+  }
+}
+
+@media(max-width: 850px) {
+  .new-design {
+    &__wrapper {
+      margin-bottom: 70px;
     }
-  
-    &__list {
-      z-index: 10;
-      position: relative;
-      max-width: 200px;
-  
-      @extend %dmsans-700;
-      line-height: 1.2;
+  }
+}
+
+@media(max-width: 575px) {
+  .new-design {
+
+    &__title {
+      margin-bottom: 15px;
+        
+      font-size: 30px;
     }
-    
-    &__name {
-      margin-bottom: 21px;
-  
-      font-size: 20px;
-      color: $title;
-    }
-  
-    &__quality {
-      font-size: 16px;
-  
-      &--classic {
-        color: $bg-btn;
+
+    .filter {
+      margin-bottom: 30px;
+      &__item {
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+      &__btn {
+        font-size: 10px;
       }
     }
-    
-    &__img {
-      position: absolute;
-      bottom: 0;
-      right: 0;
+
+    &__wrapper {
+      grid-template: repeat(6, 246px)/ 1fr;
+      margin-bottom: 40px;
     }
-    
+  }
 }

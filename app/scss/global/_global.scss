@@ -59,3 +59,21 @@ body {
     @extend %image;
   }
 }
+
+@media(max-width: 1095px) {
+  .main {
+    margin-top: 98.72px;
+  }
+}
+
+@media(max-width: 850px) {
+  .main {
+    margin-top: 78.72px;
+  }
+}
+
+@media(max-width: 575px) {
+  .main {
+    margin-top: 54px;
+  }
+}
