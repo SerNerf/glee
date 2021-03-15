@@ -1,0 +1,44 @@
+.video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 500px;
+    
+    @extend %image;
+  
+    &__link {
+      position: relative;
+  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 98px;
+      height: 98px;
+  
+      background-color: $bg-btn;
+      border-radius: 50%;
+      
+      & svg {
+        z-index: 2;
+      }
+      
+      &:hover::after {
+        opacity: 0.4;
+      }
+      
+      &::after {
+        content: "";
+        position: absolute;
+        
+        width: 127px;
+        height: 127px;
+        
+        border-radius: 50%;
+        background-color: $bg-btn;
+        opacity: 0;
+  
+        transition: opacity 0.3s;
+      }
+    }
+}

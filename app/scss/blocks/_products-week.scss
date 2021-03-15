@@ -1,0 +1,19 @@
+.products-week {
+    text-align: center;
+  
+    padding-top: 70px;
+    
+    &__title {
+      margin-bottom: 26px;
+    }
+    
+    &__wrapper {
+      display: grid;
+      grid-template: repeat(2, 380px) / repeat(4, 1fr);
+      grid-row-gap: 40px;
+      grid-column-gap: 30px;
+      min-height: 800px;
+      padding-bottom: 186px;
+    }
+  
+}

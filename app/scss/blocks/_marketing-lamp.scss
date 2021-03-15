@@ -1,0 +1,104 @@
+.marketing-lamp {
+    text-align: start;
+  
+    padding-bottom: 104px;
+  
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    &__item {
+      position: relative;
+  
+      display: flex;
+      justify-content: space-between;
+      max-width: 870px;
+      width: 100%;
+      min-height: 390px;
+      padding-bottom: 85px;
+  
+      background-color: #feefe2;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  
+    &__img {
+      position: absolute;
+      top: -100px;
+      left: 135px;
+    }
+  
+    & &__list {
+      position: relative;
+  
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+  
+      max-width: calc(260px + (335 - 260) * ((100vw - 1095px) / (1770 - 1095)));
+      margin-left: auto;
+      margin-right: calc(0px + (84 - 0) * ((100vw - 1095px) / (1770 - 1095)));
+      padding-right: 5px;
+  
+      &::before {
+        content: "";
+        position: absolute;
+        left: -260px;
+  
+        width: 230px;
+        height: 400px;
+  
+        @extend %image;
+      }
+  
+      &--1 {
+        &::before {
+          background-image: url("../images/marketing/lamp-1.png");
+        }
+      }
+  
+      &--2 {
+        &::before {
+          background-image: url("../images/marketing/lamp-2.png");
+        }
+      }
+    }
+  
+    &__name {
+      max-width: 275px;
+      margin-bottom: 20px;
+  
+      @extend %dmsans-700;
+      font-size: 26px;
+    }
+  
+    &__text {
+      margin-bottom: 30px;
+  
+      @extend %rubik-400;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+  
+    &__link {
+      display: inline-block;
+      max-width: 182px;
+      width: 100%;
+      padding: 20px 45px 20px 20px;
+  
+      @extend %rubik-500;
+      font-size: 15px;
+      line-height: 1;
+      color: $accent;
+  
+      border: 1px solid #b3b7b5;
+      border-radius: 5px;
+      background-image: url("../images/icon/right-arrow-dark.svg");
+      background-repeat: no-repeat;
+      background-position: 138px center;
+      background-size: 22px 9px;
+    }
+   
+}

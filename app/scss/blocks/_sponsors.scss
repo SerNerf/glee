@@ -1,0 +1,22 @@
+.sponsors {
+    z-index: -10;
+    position: relative;
+    min-height: 436px;
+    background-color: #fef7f0;
+  
+    &__item {
+      max-width: 150px;
+      img {
+        display: inline-block;
+      }
+    }
+  
+  
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      min-height: 436px;
+      padding-bottom: 90px;
+    }
+}

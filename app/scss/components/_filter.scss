@@ -1,0 +1,35 @@
+.filter {
+    display: flex;
+    justify-content: center;
+    
+    .products-week & {
+    margin-bottom: 80px;
+    }
+  
+    .new-design & {
+      margin-bottom: 78px;
+    }
+  
+    &__item {
+  
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+  
+    }
+    
+    &__btn {
+      @extend %dmsans-700;
+      font-size: 16px;
+      line-height: 1.2;
+      color: $filter-btn;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    
+    & .mixitup-control-active {
+      color: $filter-active;
+    }
+  
+}

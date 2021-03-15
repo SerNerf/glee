@@ -1,0 +1,37 @@
+.breadcrumbs {
+    text-align: center;
+  
+    padding: 32px 0;
+  
+    background-color: #edf1f4;
+  
+    &__title {
+      margin-bottom: 15px;
+      @extend %rubik-300;
+      font-size: 36px;
+      color: #222933;
+    }
+  
+    &__list {
+      display: flex;
+      justify-content: center;
+    }
+  
+    &__item {
+      font-size: 14px;
+      &:not(:last-child) {
+        padding-right: 5px;
+        &:after {
+          content: "/";
+          font-size: inherit;
+        }
+      }
+    }
+  
+    &__link {
+      @extend %rubik-500;
+      font-size: inherit;
+      color: rgba(34, 41, 51, 0.6);
+    }
+    
+}

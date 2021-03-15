@@ -1,12 +1,13 @@
 const { src, dest, watch, parallel, series } = require('gulp');
 
-const scss          = require('gulp-sass');
-const concat        = require('gulp-concat');
-const autoprefixer  = require('gulp-autoprefixer');
-const uglify        = require('gulp-uglify');
-const imagemin      = require('gulp-imagemin');
-const del           = require('del');
-const browserSync   = require('browser-sync').create();
+const scss            = require('gulp-sass');
+const concat          = require('gulp-concat');
+const autoprefixer    = require('gulp-autoprefixer');
+const uglify          = require('gulp-uglify');
+const imagemin        = require('gulp-imagemin');
+const nunjucksRender  = require('gulp-nunjucks-render');
+const del             = require('del');
+const browserSync     = require('browser-sync').create();
 
 function browsersync() {
   browserSync.init({
@@ -17,6 +18,19 @@ function browsersync() {
   })
 }
 
+function module() {
+  return src('app/module/*.njk')
+    .pipe(nunjucksRender())
+    .pipe(dest('app/module'))
+    .pipe(browserSync.stream())
+}
+
+function nunjucks() {
+  return src('app/*.njk')
+    .pipe(nunjucksRender())
+    .pipe(dest('app'))
+    .pipe(browserSync.stream())
+}
 
 function styles() {
   return src('app/scss/style.scss')
@@ -75,6 +89,8 @@ function cleanDist() {
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
+  watch(['app/module/*.njk'], nunjucks);
+  watch(['app/*.njk'], nunjucks);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }
@@ -85,8 +101,10 @@ exports.scripts      = scripts;
 exports.browsersync  = browsersync;
 exports.watching     = watching;
 exports.images       = images;
+exports.nunjucks     = nunjucks;
+exports.module       = module;
 exports.cleanDist    = cleanDist;
 exports.build        = series(cleanDist, images, build);
 
-exports.default      = parallel(styles, scripts, browsersync, watching);
+exports.default      = parallel(nunjucks, module, styles, scripts, browsersync, watching);
 

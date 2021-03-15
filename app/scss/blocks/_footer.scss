@@ -1,0 +1,134 @@
+.footer {
+    padding-top: 80px;
+    
+      &__top {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 70px;
+        border-bottom: 1px solid #dae4e9;
+      }
+    
+      &__item {
+        max-width: 270px;
+        width: 100%;
+        @extend %rubik-400;
+        font-size: 14px;
+        line-height: 1.8;
+        color: $footer-link;
+      }
+    
+      &__logo {
+        margin-bottom: 15px;
+      }
+    
+      &__address {
+        font-style: normal;
+      }
+    
+      &__address-text {
+        max-width: 220px;
+      }
+    
+      &__address-text + .footer__address-text {
+        margin-top: 8px;
+      }
+    
+      &__address-name,
+      &__title {
+        text-transform: uppercase;
+      }
+    
+      &__title {
+        margin: 13px 0 14px;
+        @extend %dmsans-700;
+        font-size: 16px;
+        color: $footer-title;
+      }
+    
+      &__text-item {
+    
+        &:not(:last-child) {
+          margin-bottom: 7px;
+        }
+    
+      } 
+      
+      
+      &__link {
+        color: $footer-link;
+        transition: color 0.3s;
+    
+        &:hover {
+          color: $footer-title;
+        }
+    
+      }
+    
+      &__subtitle {
+        max-width: 250px;
+        margin-bottom: 33px;
+      }
+    
+      &__form {
+        display: flex;
+        align-items: center;
+      }
+    
+      &__email {
+        max-width: 170px;
+        width: 100%;
+        padding: 8px 14px;
+        @extend %dmsans-400;
+        font-size: 12px;
+        color: $input;
+        background-color: #fef7f0;
+        border: none;
+    
+        &::placeholder{
+          color: $input;
+          @extend %dmsans-400;
+          font-size: 12px;
+          line-height: 1.2;
+        }
+    
+      }
+    
+      &__submit {
+        max-width: 100px;
+        width: 100%;
+        padding: 8px 14px;
+        @extend %dmsans-400;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #ffffff;
+        background-color: #a3bbc8;
+        border: none;
+        cursor: pointer;
+      }
+      
+      &__bottom {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+        @extend %rubik-400;
+        font-size: 14px;
+        line-height: 1.7;
+        color: $footer-link;
+      }
+    
+      &__nav {
+        display: flex;
+      }
+    
+      &__nav-item {
+        padding: 0 15px;
+    
+        &:not(:last-child) {
+          border-right: 1px solid $footer-link;
+        }
+        
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
