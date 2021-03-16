@@ -25,6 +25,7 @@
     width: 100%;
     min-height: 56px;
     margin-bottom: 25px;
+    padding: 0 20px;
 
     border: 2px solid rgb(246, 246, 246);
   }
@@ -95,5 +96,22 @@
 
     border: 2px solid rgb(163, 187, 200);
   }
+}
 
+@media(max-width: 850px) {
+
+  .login {
+
+    &__form {
+      max-width: 370px;
+    }
+
+    &__input {
+      min-height: 40px;
+    }
+  
+    &__submit {
+      min-height: 44px;
+    }
+  }
 }
