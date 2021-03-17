@@ -14,6 +14,18 @@ body {
 .main {
   margin-top: 140px;
   flex-grow: 1;
+  
+  @media(max-width: $md) {
+    margin-top: 98.72px;
+  }
+  
+  @media(max-width: $sm) {
+    margin-top: 78.72px;
+  }
+  
+  @media(max-width: $xs) {
+    margin-top: 54px;
+  }
 }
 
 .container {
@@ -60,20 +72,3 @@ body {
   }
 }
 
-@media(max-width: 1095px) {
-  .main {
-    margin-top: 98.72px;
-  }
-}
-
-@media(max-width: 850px) {
-  .main {
-    margin-top: 78.72px;
-  }
-}
-
-@media(max-width: 575px) {
-  .main {
-    margin-top: 54px;
-  }
-}

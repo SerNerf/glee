@@ -5,11 +5,29 @@
 
   background-color: #edf1f4;
 
+  @media(max-width: $md) {
+    padding: 28px 0;
+  }
+
+  @media(max-width: $sm) {
+    padding: 20px 0;
+  }
+
   &__title {
     margin-bottom: 15px;
     @extend %rubik-300;
     font-size: 36px;
     color: #222933;
+
+    @media(max-width: $md) {
+      font-size: 28px;
+    }
+
+    @media(max-width: $sm) {
+      margin-bottom: 8px;
+
+      font-size: 24px;
+    }
   }
 
   &__list {
@@ -26,6 +44,14 @@
         font-size: inherit;
       }
     }
+
+    @media(max-width: $md) {
+      font-size: 12px;
+    }
+
+    @media(max-width: $sm) {
+      font-size: 10px;
+    }
   }
 
   &__link {
@@ -34,34 +60,4 @@
     color: rgba(34, 41, 51, 0.6);
   }
     
-}
-
-@media(max-width: 1095px) {
-  .breadcrumbs {
-    padding: 28px 0;
-
-    &__title{ 
-      font-size: 28px;
-    }
-
-    &__item {
-      font-size: 12px;
-    }
-  }
-}
-
-@media(max-width: 850px) {
-  .breadcrumbs {
-    padding: 20px 0;
-
-    &__title {
-      margin-bottom: 8px;
-
-      font-size: 24px;
-    }
-
-    &__item {
-      font-size: 10px;
-    }
-  }
 }

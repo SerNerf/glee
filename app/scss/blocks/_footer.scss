@@ -1,11 +1,25 @@
 .footer {
   padding-top: 80px;
   
+  @media(max-width: $sm) {
+    padding-top: 30px;
+  }
+
   &__top {
     display: flex;
     justify-content: space-between;
     padding-bottom: 70px;
     border-bottom: 1px solid #dae4e9;
+
+    @media(max-width: $sm) {
+      padding-bottom: 20px;
+    }
+
+    @media(max-width: $xs) {
+      display: grid;
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+      grid-gap: 10px;
+    }
   }
 
   &__item {
@@ -15,6 +29,33 @@
     font-size: 14px;
     line-height: 1.8;
     color: $footer-link;
+
+    @media(max-width: $md) {
+      width: auto;
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    @media(max-width: $sm) {
+      max-width: 200px;
+
+      font-size: 10px;
+    }
+
+    @media(max-width: $xs) {
+      max-width: 150px;
+      margin: 0 auto;
+
+      &:not(:last-child) {
+        margin-right: auto;
+      }
+
+      &:nth-child(3) {
+        order: 1;
+        padding-right: 24px;
+      }
+    }
   }
 
   &__logo {
@@ -27,10 +68,13 @@
 
   &__address-text {
     max-width: 220px;
-  }
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
 
-  &__address-text + .footer__address-text {
-    margin-top: 8px;
+    @media(max-width: $sm) {
+      font-size: 12px;
+    }
   }
 
   &__address-name,
@@ -39,18 +83,29 @@
   }
 
   &__title {
+    display: inline-block;
     margin: 13px 0 14px;
     @extend %dmsans-700;
     font-size: 16px;
     color: $footer-title;
+
+    @media(max-width: $sm) {
+      font-size: 12px;
+    }
+
+    @media(max-width: $xs) {
+      margin: 13px 0 6px;
+    }
   }
 
   &__text-item {
-
     &:not(:last-child) {
       margin-bottom: 7px;
     }
 
+    @media(max-width: $md) {
+      display: inline-block;
+    }
   } 
   
   
@@ -67,11 +122,20 @@
   &__subtitle {
     max-width: 250px;
     margin-bottom: 33px;
+
+    @media(max-width: $xs) {
+      margin-bottom: 8px;
+    }
   }
 
   &__form {
     display: flex;
     align-items: center;
+
+    @media(max-width: $sm) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__email {
@@ -89,6 +153,10 @@
       @extend %dmsans-400;
       font-size: 12px;
       line-height: 1.2;
+    }
+
+    @media(max-width: $sm) {
+      max-width: 250px;
     }
   }
   
@@ -113,10 +181,28 @@
     font-size: 14px;
     line-height: 1.7;
     color: $footer-link;
+
+    @media(max-width: $sm) {
+      font-size: 12px;
+    }
+
+    @media(max-width: $xs) {
+      padding: 20px 0;
+
+      font-size: 10px;
+    }
   }
   
   &__nav {
     display: flex;
+
+    @media(max-width: $xs) {
+      max-height: 20px;
+      display: grid;
+      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+      max-width: 200px;
+      grid-row-gap: 10px;
+    }
   }
   
   &__nav-item {
@@ -129,132 +215,12 @@
     &:last-child {
       padding-right: 0;
     }
-  }
-}
 
-@media(max-width: 1095px) {
-  .footer {
-    &__item {
-      width: auto;
-      &:not(:last-child) {
-        margin-right: 10px;
-      }
-    }
-
-    &__title {
-      display: inline-block;
-    }
-
-    &__text {
-      display: flex;
-      flex-direction: column;
-    }
-
-    &__text-item {
-      display: inline-block;
-    }
-  }
-}
-
-@media(max-width: 850px) {
-  .footer {
-    padding-top: 30px;
-
-    &__top {
-      padding-bottom: 20px;
-    }
-
-    &__address-text {
-      font-size: 12px;
-    }
-
-    &__item {
-      max-width: 200px;
-
-      font-size: 10px;
-    }
-
-    &__title {
-      font-size: 12px;
-    }
-
-    &__form {
-      display: flex;
-      flex-direction: column;
-    }
-
-    &__label {
-      &:not(:last-child) {
-        width: 100%;
-        margin-bottom: 8px;
-      }
+    @media(max-width: $xs) {
       &:last-child {
-        margin-left: auto;
+        border-right: 1px solid #7b7b7b;
+        padding-right: 15px;
       }
-    }
-
-    &__email {
-      max-width: 250px;
-    }
-
-    &__bottom {
-      font-size: 12px;
-    }
-  }
-}
-
-@media(max-width: 575px) {
-  .footer {
-
-    .logo__img {
-      max-width: 100px;
-      margin-bottom: 8px;
-    }
-
-    &__top {
-      display: grid;
-      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-      grid-gap: 10px;
-    }
-
-    &__item {
-      max-width: 150px;
-      margin: 0 auto;
-
-      &:not(:last-child) {
-        margin-right: auto;
-      }
-
-      &:nth-child(3) {
-        order: 1;
-        padding-right: 24px;
-      }
-    }
-
-    &__title {
-      margin: 13px 0 6px;
-    }
-
-    &__subtitle {
-      margin-bottom: 8px;
-    }
-
-    &__bottom {
-      padding: 20px 0;
-
-      font-size: 10px;
-    }
-
-    &__nav {
-      max-height: 20px;
-      display: grid;
-      grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-      max-width: 200px;
-      grid-row-gap: 10px;
-    }
-
-    &__nav-item {
-      border-right: 1px solid #7b7b7b;
     }
   }
 }
