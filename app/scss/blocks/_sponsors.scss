@@ -4,6 +4,10 @@
   min-height: 436px;
   background-color: #fef7f0;
   
+  @media(max-width: $sm) {
+    min-height: 330px;
+  }
+
   &__item {
     max-width: 150px;
     img {
@@ -17,71 +21,10 @@
     justify-content: flex-end;
     min-height: 436px;
     padding-bottom: 90px;
-  }
-}
 
-@media(max-width: 1095px) {
-
-  .statistics {
-    padding: 40px 0;
-
-    &__list {
-      &:not(:last-child) {
-        margin-right: 5px;
-      }
-    }
-
-    &__icon {
-      margin-bottom: 5px;
-      svg {
-        width: 50px;
-        height: 50px;
-      }
-    }
-
-    &__num {
-      margin-bottom: 2px;
-
-      font-size: 26px;
-    }
-
-    &__text {
-      font-size: 14px;
-    }
-  }
-}
-
-@media(max-width: 850px) {
-  .sponsors {
-    min-height: 330px;
-
-    &__wrapper {
+    @media(max-width: $sm) {
       min-height: 330px;
       padding-bottom: 50px;
-    }
-  }
-}
-
-@media(max-width: 575px) {
-  .statistics {
-    &__items {
-      flex-wrap: wrap;
-      max-width: 400px;
-      margin: 0 auto;
-    }
-
-    &__list {
-      &:not(:last-child) {
-        margin-right: 0;
-      }
-
-      &:nth-child(odd) {
-        margin-right: 8px;
-      }
-
-      &:nth-child(-n+2) {
-        margin-bottom: 30px;
-      }
     }
   }
 }

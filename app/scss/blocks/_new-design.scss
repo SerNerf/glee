@@ -3,6 +3,20 @@
 
   &__title {
     margin-bottom: 29px;
+
+    @media(max-width: $xs) {
+      margin-bottom: 15px;
+        
+      font-size: 30px;
+    }
+  }
+
+  .filter {
+    margin-bottom: 78px;
+
+    @media(max-width: $xs) {
+      margin-bottom: 30px;
+    }
   }
 
   &__wrapper {
@@ -11,6 +25,19 @@
     grid-column-gap: 30px;
     grid-row-gap: 34px;
     margin-bottom: 120px;
+
+    @media(max-width: $md) {
+      grid-template: repeat(3, 246px)/repeat(2, 1fr);
+    }
+
+    @media(max-width: $sm) {
+      margin-bottom: 70px;
+    }
+
+    @media(max-width: $xs) {
+      grid-template: repeat(6, 246px)/ 1fr;
+      margin-bottom: 40px;
+    }
   }
   
   &__item {
@@ -50,49 +77,5 @@
     position: absolute;
     bottom: 0;
     right: 0;
-  }
-}
-
-@media(max-width: 1095px) {
-  .new-design {
-    &__wrapper {
-      grid-template: repeat(3, 246px)/repeat(2, 1fr);
-    }
-  }
-}
-
-@media(max-width: 850px) {
-  .new-design {
-    &__wrapper {
-      margin-bottom: 70px;
-    }
-  }
-}
-
-@media(max-width: 575px) {
-  .new-design {
-
-    &__title {
-      margin-bottom: 15px;
-        
-      font-size: 30px;
-    }
-
-    .filter {
-      margin-bottom: 30px;
-      &__item {
-        &:not(:last-child) {
-          margin-right: 10px;
-        }
-      }
-      &__btn {
-        font-size: 10px;
-      }
-    }
-
-    &__wrapper {
-      grid-template: repeat(6, 246px)/ 1fr;
-      margin-bottom: 40px;
-    }
   }
 }

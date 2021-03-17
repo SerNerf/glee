@@ -3,8 +3,37 @@
   
   padding-top: 70px;
     
+  @media(max-width: $xs) {
+    padding-top: 40px;
+  }
+
   &__title {
     margin-bottom: 26px;
+
+    @media(max-width: $sm) {
+      margin-bottom: 16px;
+
+      font-size: 32px;
+    }
+
+    @media(max-width: $xs) {
+      max-width: 240px;
+      margin: 0 auto 8px;
+      
+      font-size: 24px;
+    }
+  }
+
+  .filter {
+    margin-bottom: 80px;
+
+    @media(max-width: $sm) {
+      margin-bottom: 50px; 
+    }
+
+    @media(max-width: $xs) {
+      margin-bottom: 30px;
+    }
   }
     
   &__wrapper {
@@ -14,76 +43,17 @@
     grid-column-gap: 30px;
     min-height: 800px;
     padding-bottom: 186px;
-  }
-  
-}
 
-@media(max-width: 1095px) {
-  .products-week {
-    &__wrapper {
+    @media(max-width: $md) {
       grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     }
-  }
-}
 
-@media(max-width: 850px) {
-
-  .products-week {
-
-    &__title {
-      margin-bottom: 16px;
-
-      font-size: 32px;
-    }
-
-    .filter {
-      margin-bottom: 50px;
-
-      &__item {
-        &:not(:last-child) {
-          margin-right: 10px;
-        }
-      }
-
-      &__btn {
-        font-size: 14px;
-      }
-    }
-
-    &__wrapper {
+    @media(max-width: $sm) {
       grid-template: repeat(4, 1fr) / repeat(2, 1fr);
     }
-  }
-}
 
-@media(max-width: 575px) {
-  
-  .products-week {
-    padding-top: 40px;
-
-    &__title {
-      max-width: 240px;
-      margin: 0 auto 8px;
-
-      font-size: 24px;
-    }
-
-    .filter {
-      margin-bottom: 30px;
-      &__btn {
-        font-size: 10px;
-      }
-    }
-
-    &__wrapper {
+    @media(max-width: $xs) {
       grid-template: repeat(8, 1fr) / repeat(1, 1fr);
     }
-  }
-
-  .product-card {
-    &__nav {
-      opacity: 1;
-      bottom: 90px;
-    }
-  }
+  } 
 }

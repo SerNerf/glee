@@ -1,6 +1,14 @@
 .terms-conditions {
   padding-top: 120px;
 
+  @media(max-width: $sm) {
+    padding-top: 60px;
+  }
+
+  @media(max-width: $xs) {
+    padding-top: 50px;
+  }
+
   &__block {
     margin-bottom: 75px;
   }
@@ -29,17 +37,5 @@
   &__text {
     @extend %rubik-400;
     font-size: 16px;
-  }
-}
-
-@media(max-width: 850px) {
-  .terms-conditions {
-    padding-top: 60px;
-  }
-}
-
-@media(max-width: 575px) {
-  .terms-conditions {
-    padding-top: 50px;
   }
 }

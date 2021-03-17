@@ -7,6 +7,19 @@
   
   @extend %image;
 
+  @media(max-width: $md) {
+    min-height: 286px;
+    background-size: contain;
+  }
+
+  @media(max-width: $sm) {
+    min-height: 222px;
+  }
+
+  @media(max-width: $xs) {
+    min-height: 150px;
+  }
+
   &__link {
     position: relative;
 
@@ -40,15 +53,8 @@
 
       transition: opacity 0.3s;
     }
-  }
-}
 
-@media(max-width: 1095px) {
-  .video {
-    min-height: 286px;
-    background-size: contain;
-
-    &__link {
+    @media(max-width: $md) {
       width: 88px;
       height: 88px;
       &::after {
@@ -57,14 +63,7 @@
       }
     }
 
-  }
-}
-
-@media(max-width: 850px) {
-  .video {
-    min-height: 222px;
-
-    &__link {
+    @media(max-width: $sm) {
       width: 60px;
       height: 60px;
       &::after {
@@ -72,14 +71,8 @@
         height: 90px;
       }
     }
-  }
-}
 
-@media(max-width: 575px) {
-  .video {
-    min-height: 150px;
-
-    &__link {
+    @media(max-width: $xs) {
       width: 50px;
       height: 50px;
 

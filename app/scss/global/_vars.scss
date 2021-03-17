@@ -11,23 +11,16 @@ $link-hover: #666666;
 $input: #234969;
 
 // $xl: px;
-// $lg: px;
+$lg: 1400px;
 $md: 1095px;
 $sm: 850px;
 $xs: 575px;
-
-$xl: px;
-$lg: px;
-$md: px;
-$sm: px;
-$xs: px;
 
 %image {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-
 
 %dmsans-400 {
   font-family: 'DMSans', sans-serif;

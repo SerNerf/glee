@@ -5,21 +5,59 @@
 
   background-color: #fcd7b6;
 
+  @media(max-width: $md) {
+    padding: 40px 0;
+  }
+
   &__items {
     display: flex;
     justify-content: space-around;
     @extend %dmsans-700;
     color: #243f4d;
+
+    @media(max-width: $xs) {
+      flex-wrap: wrap;
+      max-width: 400px;
+      margin: 0 auto;
+    }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    @media(max-width: $md) {
+      &:not(:last-child) {
+        margin-right: 5px;
+      }
+    }
+
+    @media(max-width: $xs) {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+
+      &:nth-child(odd) {
+        margin-right: 8px;
+      }
+
+      &:nth-child(-n+2) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__icon {
     margin-bottom: 10px;
+
+    @media(max-width: $md) {
+      margin-bottom: 5px;
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
   }
 
   &__num {
@@ -27,11 +65,20 @@
 
     font-size: 36px;
     line-height: 1;
+
+    @media(max-width: $md) {
+      margin-bottom: 2px;
+
+      font-size: 26px;
+    }
   }
 
   &__text {
     font-size: 18px;
     line-height: 1.7;
+
+    @media(max-width: $md) {
+      font-size: 14px;
+    }
   }
 }
-
