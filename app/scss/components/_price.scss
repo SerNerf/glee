@@ -1,0 +1,48 @@
+.price {
+    .irs {
+        top: -10px;
+
+        .irs-line {
+            top: 18px;
+            height: 3px;
+
+            background-color: #c2d2db;
+        }
+
+        .irs-bar {
+            top: 7px;
+
+            height: 5px;
+
+            background-color: #a3bbc8;
+        }
+
+        .irs-handle {
+            top: 0;
+
+            background-color: #a3bbc8;
+
+            cursor: pointer;
+            
+            i {
+                display: none;
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -20px;
+    }
+
+    &__num {
+        @extend %rubik-400;
+        font-size: 14px;
+        color: $default;
+        &::before {
+            content: "$";
+        }
+    }
+
+}
