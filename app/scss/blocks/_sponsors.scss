@@ -1,7 +1,7 @@
 .sponsors {
   z-index: -10;
   position: relative;
-  min-height: 436px;
+  min-height: 300px;
   background-color: #fef7f0;
   
   @media(max-width: $sm) {
@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    min-height: 436px;
+    min-height: 300px;
     padding-bottom: 90px;
 
     @media(max-width: $sm) {

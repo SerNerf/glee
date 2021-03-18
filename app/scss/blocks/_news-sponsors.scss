@@ -1,6 +1,14 @@
 .news-sponsors {
     z-index: 1;
     position: relative;
+
+    .sponsors {
+        min-height: 436px;
+    }
+
+    .sponsors__wrapper {
+        min-height: 436px;
+    }
 }
 
 @import "news";

@@ -4,30 +4,36 @@
 @import "global/libs";
 @import "global/global";
 
-
+/* Компоненты с разных страниц */
 @import "components/filter";
 @import "components/product-card";
+@import "components/category";
+@import "components/brand";
+@import "components/recent";
 
-
+/* Общие блоки */
 @import "blocks/header";
 @import "blocks/breadcrumbs";
 @import "blocks/news-sponsors";
 @import "blocks/footer";
 
 /* Главная страница */
-@import "blocks/main-slider";
-@import "blocks/products-week";
-@import "blocks/marketing-lamp";
-@import "blocks/new-design";
-@import "blocks/video";
+@import "blocks/home/main-slider";
+@import "blocks/home/products-week";
+@import "blocks/home/marketing-lamp";
+@import "blocks/home/new-design";
+@import "blocks/home/video";
 
 /* Страница About Us */
-@import "blocks/about";
-@import "blocks/statistics";
-@import "blocks/team";
+@import "blocks/about/about";
+@import "blocks/about/statistics";
+@import "blocks/about/team";
 
 /* Страница Terms & Conditions */
-@import "blocks/tearms-conditions";
+@import "blocks/tearms-conditions/tearms-conditions";
 
 /* Страница Log in */
-@import "blocks/login";
+@import "blocks/login/login";
+
+/* Страница Products */
+@import "blocks/products/products";

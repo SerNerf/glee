@@ -1,0 +1,98 @@
+.products {
+    padding: 100px 0;
+
+    &__wrapper {
+        display: grid;
+        grid-template: auto / minmax(100px , 270px) 1fr;
+    }
+
+    &__aside {
+        display: grid;
+        grid-template-rows: auto;
+        gap: 60px 0;
+    }
+
+    &__title {
+        position: relative;
+
+        display: inline-block;
+        margin-bottom: 25px;
+
+        @extend %dmsans-700;
+        font-size: 18px;
+        line-height: 1.2;
+        color: $default;
+
+        text-transform: uppercase;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 40%;
+            right: -55px;
+
+            width: 40px;
+            height: 3px;
+
+            background-color: rgb(163, 187, 200);
+        }
+    }
+
+    &__items {
+        display: grid;
+        grid-template: repeat(4, minmax(auto , 380px)) 50px / repeat(3, 1fr);
+        padding-left: 30px;
+        gap: 40px 30px;
+    }
+
+    &__list {
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        grid-template: auto / repeat(3, 50px) 74px;
+        grid-column: span 3;
+        gap: 0 15px;
+    }
+
+    &__btn {
+        width: 100%;
+        min-height: 50px;
+
+        @extend %rubik-400;
+        font-size: 16px;
+        color: $default;
+
+        background-color: #ffffff;
+        border: 1px solid #a3bbc8;
+
+        cursor: pointer;
+
+        transition: background-color 0.3s , color 0.3s;
+
+        &--active {
+            color: #ffffff;
+
+            background-color: #a3bbc8;
+        }
+
+        &:not(.products__btn--active) {
+            &:hover {
+                color: #ffffff;
+                background-color: #a3bbc8;
+                opacity: 0.7;
+            }
+        }
+    }
+      
+}._2 {
+    font-size: 16px;
+    font-family: "Rubik";
+    color: rgb(36, 63, 77);
+    line-height: 1.875;
+    text-align: left;
+    position: absolute;
+    left: 1061.75px;
+    top: 2147.5px;
+    z-index: 41;
+  }
+  

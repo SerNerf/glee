@@ -1,0 +1,70 @@
+.recent {
+
+    &__wrapper {
+        display: grid;
+        gap: 25px 0;
+    }
+
+    &__item {
+        display: grid;
+        grid-template: auto / 70px 2fr;
+        gap: 0 20px;
+    }
+
+    &__img {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+
+        max-width: 70px;
+        width: 100%;
+        min-height: 70px;
+        max-height: 70px;
+
+        border: 2px solid #f2f2f2;
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        padding: 5px 0;
+
+        @extend %rubik-400;
+    }
+
+    &__name {
+        font-size: 14px;
+        color: #333333;
+    }
+
+
+
+    &__price {
+        font-size: 15px;
+        color: #333333;
+
+        &::after {
+            content: "$";
+            position: relative;
+            right: 3px;
+        }
+    }
+
+}
+
+.Pendant_lamp {
+  font-size: 23.312px;
+  font-family: "Rubik";
+  color: rgb(51, 51, 51);
+  line-height: 1.134;
+  text-align: left;
+  -moz-transform: matrix( 0.60055331763948,0,0,0.60055331763948,0,0);
+  -webkit-transform: matrix( 0.60055331763948,0,0,0.60055331763948,0,0);
+  -ms-transform: matrix( 0.60055331763948,0,0,0.60055331763948,0,0);
+  position: absolute;
+  left: 434.19px;
+  top: 1276.552px;
+  z-index: 152;
+}
+
+  

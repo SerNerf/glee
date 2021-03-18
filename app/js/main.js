@@ -51,5 +51,17 @@ $(function(){
     ]
   })
   
-  var mixer = mixitup('.products-week__wrapper');
+  var pw_filter = document.querySelector('[data-ref="products-week__filter"]');
+  var nd_filter = document.querySelector('[data-ref="new-design__filter"]');
+  var category_filter = document.querySelector('[data-ref="category__filter"]');
+
+  var config = {
+    controls: {
+      scope: 'local'
+    }
+  };
+
+  var pw_mixer = mixitup(pw_filter, config);
+  var nd_mixer = mixitup(nd_filter, config);
+  var category_mixer = mixitup(category_filter, config); 
 });
