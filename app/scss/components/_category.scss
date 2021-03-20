@@ -1,5 +1,5 @@
 .category {
-
+    grid-area: category;
     &__wrapper {
         display: grid;
         grid-template: repeat(5, 43px) / 1fr;

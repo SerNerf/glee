@@ -8,7 +8,13 @@
 
     &__aside {
         display: grid;
-        grid-template-rows: auto;
+        grid-template-areas: 
+        "category"
+        "brand"
+        "price"
+        "recent"
+        ;
+        grid-template-rows: 260px 260px 100px 305px;
         gap: 60px 0;
     }
 
