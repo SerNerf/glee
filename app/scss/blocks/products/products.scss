@@ -43,7 +43,105 @@
         grid-template: repeat(4, minmax(auto , 380px)) 50px / repeat(3, 1fr);
         padding-left: 30px;
         gap: 40px 30px;
+
+        &.products__items--list {
+            grid-template: repeat(4, minmax(auto , 500px)) 50px / repeat(3, 1fr);
+
+            .product-card {
+                padding: 0;
+                grid-column: span 3;
+                flex-direction: row;
+                max-width: 100%;
+
+                box-shadow: none;
+
+                &:not(:nth-child(-n+4)) {
+                    display: none;
+                }
+
+                &__img {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    max-width: 400px;
+                    width: 100%;
+                    min-height: 500px;
+                    max-height: 500px;
+                    margin-right: 60px;
+                    padding: 70px 10px;
+
+                    border: 2px solid rgb(242, 242, 242);
+                }
+
+                &__img-item {
+                    min-height: 360px;
+                }
+
+                &__wrapper {
+                    text-align: left;
+                    position: relative;
+
+                    max-width: 450px;
+                    width: 100%;
+                    padding: 85px 0 75px;
+                }
+
+                &__name {
+                    @extend %rubik-400;
+                    font-size: 40px;
+                    color: #333333;
+                }
+
+                &__stars {
+                    display: block;
+                }
+
+                &__price {
+                    margin-bottom: 25px;
+
+                    @extend %rubik-400;
+                    font-size: 30px;
+                    color: #333333;
+                }
+
+                &__discription {
+                    display: block;
+
+                    @extend %rubik-400;
+                    font-size: 16px;
+                    line-height: 1.8;
+                    color: $default;
+                }
+
+                &__nav {
+                    opacity: 1;
+                }
+
+                &__btn {
+                    border-radius: 0;
+                    background-color: rgb(255, 255, 255);
+                    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+
+                    &:hover,
+                    &--active {
+                        background-color: #a3bbc8;
+                        path {
+                            fill: #ffffff;
+                        }
+                    }
+
+                    &--search {
+                        display: none;
+                    }
+                } 
+            }
+        }
     }
+      
+      
+
+      
+
 
     &__list {
         align-items: center;
