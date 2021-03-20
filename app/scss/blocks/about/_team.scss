@@ -82,6 +82,14 @@
 
     @extend %image;
 
+    @media(max-width: $md) {
+      min-height: calc(230px + (320 - 230) * ((100vw - 851px) / (1095 - 851)));;
+    }
+
+    @media(max-width: $sm) {
+      min-height: 320px;
+    }
+
     @media(max-width: $xs) {
       margin: 0 auto;
     }

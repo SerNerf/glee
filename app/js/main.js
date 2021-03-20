@@ -1,3 +1,23 @@
+// $(document).ready(function () {
+
+//   // $('#products-week__wrapper').mixItUp({
+//   //   selectors: {
+//   //     filter: '.products-week__filter-btn'
+//   //   }
+//   // })
+
+//   var mixer = mixitup('#products-week__wrapper');
+//   var mixer_2 = mixitup('.new-design__wrapper');
+  
+
+//   // $('.new-design__wrapper').mixItUp({
+//   //   selectors: {
+//   //     filter: '.new-design__filter-btn'
+//   //   }
+//   // })
+
+// });
+
 $(function(){
   
   // $(document).click(function(event) {
@@ -68,20 +88,6 @@ $(function(){
       },
     ]
   })
-  
-  var pw_filter = document.querySelector('[data-ref="products-week__filter"]');
-  var nd_filter = document.querySelector('[data-ref="new-design__filter"]');
-  var category_filter = document.querySelector('[data-ref="category__filter"]');
-
-  var config = {
-    controls: {
-      scope: 'local'
-    }
-  };
-
-  var pw_mixer = mixitup(pw_filter, config);
-  var nd_mixer = mixitup(nd_filter, config);
-  var category_mixer = mixitup(category_filter, config);
   
   
 });
