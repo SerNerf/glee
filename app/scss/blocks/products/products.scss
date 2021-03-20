@@ -79,7 +79,6 @@
 
                 &__wrapper {
                     text-align: left;
-                    position: relative;
 
                     max-width: 450px;
                     width: 100%;
@@ -87,6 +86,8 @@
                 }
 
                 &__name {
+                    margin-bottom: 20px;
+
                     @extend %rubik-400;
                     font-size: 40px;
                     color: #333333;
@@ -94,6 +95,8 @@
 
                 &__stars {
                     display: block;
+                    margin-bottom: 35px;
+                    padding: 0;
                 }
 
                 &__price {
@@ -106,6 +109,7 @@
 
                 &__discription {
                     display: block;
+                    margin-bottom: 35px;
 
                     @extend %rubik-400;
                     font-size: 16px;
@@ -114,6 +118,7 @@
                 }
 
                 &__nav {
+                    position: static;
                     opacity: 1;
                 }
 
@@ -132,6 +137,10 @@
 
                     &--search {
                         display: none;
+                    }
+
+                    &--buy {
+                        margin: 0 10px 0 0;
                     }
                 } 
             }

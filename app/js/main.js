@@ -89,5 +89,17 @@ $(document).ready(function () {
     ]
   })
   
+  $(".recent__stars").rateYo({
+    starWidth: "10px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00"
+  });
+
+  $(".product-card__stars").rateYo({
+    starWidth: "18px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00"
+  });
+
   
 });
