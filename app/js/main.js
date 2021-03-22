@@ -95,12 +95,18 @@ $(document).ready(function () {
     ratedFill: "#ffcc00",
     readOnly: true
   });
-
+  
   $(".product-card__stars").rateYo({
     starWidth: "18px",
     normalFill: "#d6d6d6",
     ratedFill: "#ffcc00",
-    // readOnly: true
+  });
+  
+  $(".product-detalis__stars").rateYo({
+    starWidth: "18px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    readOnly: true
   });
 
   
