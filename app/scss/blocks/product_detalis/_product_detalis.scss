@@ -1,0 +1,260 @@
+.product-detalis {
+    padding: 120px 0;
+
+    @media(max-width: $xs) {
+      padding: 40px 0;
+    }
+
+    &__top {
+        display: grid;
+        grid-template: auto / repeat(2, 1fr);
+        gap: 0 30px;
+        margin-bottom: 100px;
+
+        @media(max-width: $sm) {
+          grid-template: repeat(2, auto) / 1fr;
+          margin-bottom: 25px;
+        }
+    }
+
+    &__images {
+        display: grid;
+        grid-template: repeat(3, 160px) / repeat(4, 1fr);
+        gap: 25px;
+
+        @media(max-width: $xs) {
+            grid-template: repeat(3, 115px) / repeat(4, 1fr);
+        }
+    }
+
+    &__images-item {
+        position: relative;
+        min-height: 160px;
+
+        border: 2px solid #f2f2f2;
+
+        @media(max-width: $xs) {
+          min-height: 105px;
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto auto;
+
+            @media(max-width: $xs) {
+              max-height: 100px;
+            }
+        }
+
+        &--1 {
+            img {
+                bottom: auto;
+            }
+        }
+
+        &--2 {
+            img {
+                top: auto;
+                left: auto;
+            }  
+        }
+
+        &--4 {
+            grid-column: 2 / 5;
+            grid-row: 1 / 4;
+            img {
+                @media(max-width: $xs) {
+                    max-height: 360px;
+                }
+            }
+        }
+    }     
+
+    &__wrapper {
+        padding: 25px 0 30px;
+
+        @media(max-width: $sm) {
+          text-align: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 15px;
+
+        @extend %rubik-400;
+        font-size: 40px;
+        line-height: 1.2;
+        color: #333333;
+    }
+
+    &__stars {
+        margin-bottom: 30px;
+        padding: 0;
+
+        @media(max-width: $sm) {
+            width: 100%;
+            margin: 0 auto 15px;
+        }
+    }
+
+    &__price {
+        margin-bottom: 30px;
+
+        @extend %rubik-400;
+        font-size: 30px;
+        line-height: 1.2;
+        color: #333333;
+
+        &::after {
+            content: "$";
+            position: relative;
+            right: 5px;
+        }
+
+        @media(max-width: $sm) {
+          margin-bottom: 10px;
+        }
+    }
+
+    &__description {
+        margin-bottom: 30px;
+
+        @extend %rubik-400;
+        font-size: 16px;
+        line-height: 1.8;
+        color: #243f4d;
+
+        @media(max-width: $sm) {
+            text-align: center;
+
+          max-width: 500px;
+          margin: 0 auto 15px;
+        }
+    }
+
+    &__buttons {
+        margin-bottom: 50px;
+        .product-detalis__btn {
+            max-width: 200px;
+
+            @media(max-width: $xs) {
+                max-width: 150px;
+              min-height: 41px;
+            }
+        }
+    }
+
+    &__value {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    &__value-btn,
+    &__input {
+        text-align: center;
+
+        width: 50px;
+        height: 50px;
+
+        @extend %rubik-400;
+        font-size: 15px;
+        color: #333333;
+
+        border: 1px solid #a3bbc8;
+        background-color: #ffffff;
+
+        @media(max-width: $xs) {
+          width: 40px;
+          height: 40px;
+        }
+    }
+
+    &__value-btn {
+        cursor: pointer;
+    }
+
+    &__input {
+        margin: 0 -5px;
+        &:placeholder {
+            @extend %rubik-400;
+            font-size: 15px;
+            color: #333333;
+        }
+    }
+
+    &__btn {
+        max-width: 240px;
+        width: 100%;
+        min-height: 50px;
+
+        @extend %rubik-500;
+        font-size: 18px;
+        color: #243f4d;
+
+        border-radius: 5px;
+        border: none;
+        background-color: rgba(163, 187, 200, 0.2);
+
+        cursor: pointer;
+
+        transition: background-color 0.3s , color 0.3s;
+
+        &--active {
+            color: #ffffff;
+            background-color: #a3bbc8;
+        }
+
+        &:not(.product__detalis__btn--active):hover {
+            background-color: rgba(163, 187, 200, 1);
+            color: #ffffff;
+        }
+
+    }
+
+    &__item {
+        @extend %rubik-400;
+        font-size: 16px;
+        color: #243f4d;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__bottom {
+        .product-detalis__btn {
+            @media(max-width: $sm) {
+                max-width: 170px;
+                min-height: 40px;
+
+                font-size: 14px;
+            }
+
+            @media(max-width: $xs) {
+              font-size: 12px;
+            }
+        }
+    }
+
+    & &__bottom-list {
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    &__bottom-item {
+        max-width: 240px;
+        width: 100%;
+
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+
+}
+  
