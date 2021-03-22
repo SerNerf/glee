@@ -236,6 +236,7 @@
     }
 
     &--delivery::before {
+      top: 18px;
       height: 37px;
       background-image: url("../images/icon/delivery.svg");
     }
@@ -247,6 +248,9 @@
 
     @media(max-width: $md) {
       padding-left: 100px;
+      &::before {
+        left: 30px;
+      }
     }
 
     @media(max-width: $sm) {
