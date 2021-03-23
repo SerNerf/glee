@@ -1,0 +1,53 @@
+.blog-list {
+    padding: 120px 0;
+
+    &__wrapper {
+        display: grid;
+        grid-template: auto / 1fr 270px;
+        gap: 0 70px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-rows: repeat(4, 1fr) 50px;
+        gap: 50px 0;
+    }
+
+    &__aside {
+        display: grid;
+        grid-template-areas:
+        "search"
+        "category"
+        "recent-posts";
+        grid-template-rows: 52px 260px 305px;
+        gap: 30px 0;
+    }
+
+    &__list-btn {
+        width: 48px;
+        height: 48px;
+
+        color: #243f4d;
+
+        border: 1px solid #a3bbc8;
+        background-color: #ffffff;
+
+        cursor: pointer;
+
+        transition: background-color 0.3s , color 0.3s;
+
+        &:last-child {
+            width: 72px;
+        }
+
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+
+        &--active,
+        &:hover {
+            background-color: #a3bbc8;
+            color: #ffffff;
+        }
+    }
+}  

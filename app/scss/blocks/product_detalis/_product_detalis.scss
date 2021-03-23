@@ -180,7 +180,6 @@
     &__input {
         margin: 0 -5px;
         &:placeholder {
-            @extend %rubik-400;
             font-size: 15px;
             color: #333333;
         }

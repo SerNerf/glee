@@ -72,3 +72,28 @@ body {
   }
 }
 
+.aside-title {
+  position: relative;
+
+  display: inline-block;
+  margin-bottom: 25px;
+
+  @extend %dmsans-700;
+  font-size: 18px;
+  line-height: 1.2;
+  color: $default;
+
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 40%;
+    right: -55px;
+
+    width: 40px;
+    height: 3px;
+
+    background-color: rgb(163, 187, 200);
+  }
+}

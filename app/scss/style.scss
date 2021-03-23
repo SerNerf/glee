@@ -11,6 +11,9 @@
 @import "components/price";
 @import "components/brand";
 @import "components/recent";
+@import "components/recent-posts";
+@import "components/search";
+@import "components/blog-item";
 
 /* Общие блоки */
 @import "blocks/header";
@@ -42,3 +45,6 @@
 /* Страница Product Detalis */
 @import "blocks/product_detalis/product_detalis";
 @import "blocks/product_detalis/related-products";
+
+/* Страница Blog-list */
+@import "blocks/blog-list/blog-list";
