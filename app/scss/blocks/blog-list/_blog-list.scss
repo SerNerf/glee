@@ -1,10 +1,24 @@
 .blog-list {
     padding: 120px 0;
 
+    @media(max-width: $md) {
+      padding: 70px 0;
+    }
+
     &__wrapper {
         display: grid;
         grid-template: auto / 1fr 270px;
         gap: 0 70px;
+
+        @media(max-width: $sm) {
+            grid-template: auto / 1fr 200px;
+            gap: 0 30px;
+        }
+
+        @media(max-width: $xs) {
+            grid-template: auto / 1fr;
+            gap: 0;
+        }
     }
 
     &__items {
@@ -21,6 +35,10 @@
         "recent-posts";
         grid-template-rows: 52px 260px 305px;
         gap: 30px 0;
+
+        @media(max-width: $xs) {
+          display: none;
+        }
     }
 
     &__list-btn {
