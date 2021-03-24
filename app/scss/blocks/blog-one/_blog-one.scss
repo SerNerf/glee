@@ -289,6 +289,7 @@
 
         font-size: 16px;
         color: #666666;
+
         @media(max-width: $sm) {
             grid-column: 2 / 6;
         }
@@ -346,26 +347,40 @@
 
         @extend %image;
         background-size: auto;
-        grid-row: 4 / 5;
 
         &--facebook {
             background-image: url("../images/icon/author/facebook.svg");
-            grid-column: 2 / 3;
         }
 
         &--twitter {
             background-image: url("../images/icon/author/twitter.svg");
-            grid-column: 3 / 4;
         }
 
         &--instagram {
             background-image: url("../images/icon/author/instagram.svg");
-            grid-column: 4 / 5;
         }
 
         &--google {
             background-image: url("../images/icon/author/google.svg");
-            grid-column: 5 / 6;
+        }
+
+        @media(max-width: $sm) {
+            grid-row: 4 / 5;
+            &--facebook {
+                grid-column: 2 / 3;
+            }
+    
+            &--twitter {
+                grid-column: 3 / 4;
+            }
+    
+            &--instagram {
+                grid-column: 4 / 5;
+            }
+    
+            &--google {
+                grid-column: 5 / 6;
+            }
         }
     }
 
