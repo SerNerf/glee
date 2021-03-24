@@ -60,6 +60,10 @@ $(document).ready(function () {
     $('.menu').toggleClass('menu--active');
   })
 
+  $('.breadcrumbs__title').click(function(){
+    $('.products__items').toggleClass('products__items--list');
+  })
+
   $('.main-slider__inner').slick({
     arrows: false,
     dots: true,

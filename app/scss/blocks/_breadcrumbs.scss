@@ -30,6 +30,13 @@
     }
   }
 
+  button {
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+  }
+
   &__list {
     display: flex;
     justify-content: center;
