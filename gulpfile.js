@@ -19,9 +19,9 @@ function browsersync() {
 }
 
 function module() {
-  return src('app/module/*.njk')
+  return src('app/module/blog-one/*.njk')
     .pipe(nunjucksRender())
-    .pipe(dest('app/module'))
+    .pipe(dest('app/module/blog-one'))
     .pipe(browserSync.stream())
 }
 
@@ -92,7 +92,7 @@ function cleanDist() {
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
-  watch(['app/module/*.njk'], module);
+  watch(['app/module/blog-one/*.njk'], module);
   watch(['app/*.njk'], nunjucks);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
