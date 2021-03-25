@@ -64,6 +64,11 @@ $(document).ready(function () {
     $('.products__items').toggleClass('products__items--list');
   })
 
+  $('.products__arrow').click(function(){
+    $('.products__arrow').toggleClass('products__arrow--active');
+    $('.products__aside').toggleClass('products__aside--active');
+  })
+
   $('.main-slider__inner').slick({
     arrows: false,
     dots: true,

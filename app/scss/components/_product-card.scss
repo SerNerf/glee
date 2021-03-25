@@ -44,8 +44,7 @@
     }
 
     @media(max-width: $sm) {
-      bottom: calc(70px + (85 - 70) * ((100vw - 850px) / (850 - 575)));
-      bottom: 85px;
+      bottom: 110px;
     }
 
     @media(max-width: $xs) {
