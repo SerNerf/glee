@@ -98,11 +98,15 @@
 
         <div class="contact__bottom">
             <form class="contact__form" action="#">
-                <input class="contact__input contact__input--name" type="text" placeholder="Name" required>
-
-                <input class="contact__input contact__input--email" type="email" placeholder="Email" required>
-
-                <textarea class="contact__input contact__input--textarea" placeholder="Message" required></textarea>
+                <label class="contact__label">
+                    <input class="contact__input contact__input--name" type="text" placeholder="Name" required>
+                </label>
+                <label class="contact__label">
+                    <input class="contact__input contact__input--email" type="email" placeholder="Email" required>
+                </label>
+                <label class="contact__label contact__label--textarea">
+                    <textarea class="contact__input contact__input--textarea" placeholder="Message" required></textarea>
+                </label>
 
                 <button class="contact__submit" type="submit">
                     Send message

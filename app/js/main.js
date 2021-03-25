@@ -53,8 +53,6 @@ $(document).ready(function () {
         $('.price__num--to').text(data.to);
       }
     });
-
-
           
   $('.user-nav__link--menu').click(function(){
     $('.menu').toggleClass('menu--active');
@@ -118,5 +116,4 @@ $(document).ready(function () {
     readOnly: true
   });
 
-  
 });

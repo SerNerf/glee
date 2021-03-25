@@ -532,6 +532,12 @@
         }
     }
 
+    &__bottom-label {
+        &--textarea {
+            grid-column: 1 / 3;
+        }
+    }
+
     &__bottom-input {
         width: 100%;
         height: 48px;
@@ -564,8 +570,6 @@
         }
 
         &--textarea {
-            grid-column: 1 / 3;
-
             height: 120px;
             padding: 15px 60px 15px 20px;
 

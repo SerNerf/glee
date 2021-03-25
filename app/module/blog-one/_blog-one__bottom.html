@@ -6,11 +6,17 @@
 
     <form class="blog-one__bottom-form" action="#">
 
-        <input class="blog-one__bottom-input blog-one__bottom-input--name" type="text" placeholder="Name" required>
-
-        <input class="blog-one__bottom-input blog-one__bottom-input--email" type="email" placeholder="youremail@gmail.com" required>
-
-        <textarea class="blog-one__bottom-input blog-one__bottom-input--textarea" placeholder="Comment" required></textarea>
+        <label class="blog-one__bottom-label">
+            <input class="blog-one__bottom-input blog-one__bottom-input--name" type="text" placeholder="Name" required>
+        </label>
+        <label class="blog-one__bottom-label">
+            <input class="blog-one__bottom-input blog-one__bottom-input--email" type="email"
+                placeholder="youremail@gmail.com" required>
+        </label>
+        <label class="blog-one__bottom-label blog-one__label--textarea">
+            <textarea class="blog-one__bottom-input blog-one__bottom-input--textarea" placeholder="Comment"
+                required></textarea>
+        </label>
         <button class="blog-one__bottom-submit" type="submit">
             Post comment
         </button>
